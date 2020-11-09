@@ -1,0 +1,38 @@
+{
+  "name": "@kwikswap/default-token-list",
+  "version": "0.0.1",
+  "description": "◦ The Kwikswap default token list",
+  "main": "build/kwikswap-default.tokenlist.json",
+  "scripts": {
+    "test": "mocha",
+    "build": "rimraf build && mkdir -p build && node src/write.js > build/kwikswap-default.tokenlist.json",
+    "prepublishOnly": "npm test && npm run build"
+  },
+  "files": [
+    "build/kwikswap-default.tokenlist.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwikswap/default-token-list"
+  },
+  "keywords": [
+    "kwikswap",
+    "default",
+    "token",
+    "list"
+  ],
+  "author": "Netixsol",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Kwikswap/default-token-list/issues"
+  },
+  "homepage": "https://github.com/Kwikswap/default-token-list#readme",
+  "devDependencies": {
+    "@ethersproject/address": "^5.0.2",
+    "@kwikswap/token-lists": "0.0.3",
+    "ajv": "^6.12.3",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "rimraf": "^3.0.2"
+  }
+}
